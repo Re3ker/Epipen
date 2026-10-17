@@ -1,0 +1,38 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": { "major": 3, "minor": 27, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "Debug",
+      "displayName": "Debug x64 (Visual Studio Ninja)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/Debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_MAKE_PROGRAM": "$env{EPIPEN_NINJA}",
+        "CMAKE_SYSTEM_VERSION": "10.0.26100.0",
+        "BUILD_TESTING": "ON"
+      }
+    },
+    {
+      "name": "Release",
+      "displayName": "Release x64 (Visual Studio Ninja)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/Release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_MAKE_PROGRAM": "$env{EPIPEN_NINJA}",
+        "CMAKE_SYSTEM_VERSION": "10.0.26100.0",
+        "BUILD_TESTING": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    { "name": "Debug", "configurePreset": "Debug", "configuration": "Debug" },
+    { "name": "Release", "configurePreset": "Release", "configuration": "Release" }
+  ],
+  "testPresets": [
+    { "name": "Debug", "configurePreset": "Debug", "output": { "outputOnFailure": true } },
+    { "name": "Release", "configurePreset": "Release", "output": { "outputOnFailure": true } }
+  ]
+}

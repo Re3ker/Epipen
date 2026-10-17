@@ -1,0 +1,43 @@
+# CMake and build output
+/build/
+/out/
+/cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+CTestTestfile.cmake
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+
+# Visual Studio and user-specific files
+/.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.VC.opendb
+
+# Native binaries and debug artifacts
+*.exe
+*.dll
+*.lib
+*.exp
+*.pdb
+*.ilk
+*.obj
+*.idb
+
+# Generated shader headers
+/generated/
+filter_compute.h
+filter_vs.h
+filter_ps.h
+
+# Local runtime data and logs
+*.log
+*.tmp
+
+# OS metadata
+Thumbs.db
+Desktop.ini
