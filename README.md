@@ -2,6 +2,8 @@
 
 Epipen is a Windows 11 x64 experiment that reduces abrupt visual changes on one SDR monitor. It is not a medical product, does not diagnose epilepsy, and does not guarantee prevention of seizures.
 
+See [INSTALL.md](INSTALL.md) for prerequisites, building from source, running tests, starting the application, and troubleshooting.
+
 ## Current implementation
 
 The live desktop is captured with Windows Graphics Capture and filtered on the GPU before DirectComposition presents it. The static filter maps sRGB brightness limits in linear light. The temporal filter limits the largest per-pixel RGB change to the selected rate. The controls update the render thread while it is running, and settings are written atomically to `%LOCALAPPDATA%\Epipen\settings.ini`.
